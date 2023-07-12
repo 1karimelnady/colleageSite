@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('management_generals', function (Blueprint $table) {
             $table->id();
             $table->string('manager_name');
-            $table->string('manager_job');
+            $table->string('managerjob');
             $table->timestamps();
         });
     }

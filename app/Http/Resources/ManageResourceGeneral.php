@@ -17,7 +17,7 @@ class ManageResourceGeneral extends JsonResource
         return [
             'id'=>$this->id,
             'manager_name'=>$this->manager_name,
-            'manager_job'=>$this->manager_job
+            'managerjob'=>$this->managerjob
         ];
     }
 }

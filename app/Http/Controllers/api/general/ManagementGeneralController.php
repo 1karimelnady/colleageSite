@@ -21,7 +21,7 @@ class ManagementGeneralController extends Controller
     public function StoreManager(Request $request){
         $vaildator = Validator::make($request->all(),[
             'manager_name'=>'required',
-            'manager_job'=>'required'
+            'managerjob'=>'required'
         ]);
         if($vaildator->fails()){
             return $this->apiResponse(null,$vaildator->errors(),404);
@@ -48,7 +48,7 @@ class ManagementGeneralController extends Controller
     public function UpdateManager(Request $request,$id){
         $vaildator = Validator::make($request->all(),[
             'manager_name'=>'required',
-            'manager_job'=>'required'
+            'managerjob'=>'required'
         ]);
         if($vaildator->fails()){
             return $this->apiResponse(null,$vaildator->errors(),404);

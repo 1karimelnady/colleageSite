@@ -865,7 +865,7 @@ public function getCourses($team_num ,$team_name){
                  return $this->apiResponse($files, 'file created successfully', 201);
         }  
 
-        elseif($team_num == 4 && $team_name == 'cs'){
+        elseif($team_num == 4 && $team_name == 'it'){
             $file = $request->file('file')->getClientOriginalName();
             $title = $request->file('file')->store('public/general/uploads');
             $files = FourthIt_examnation_general::create([

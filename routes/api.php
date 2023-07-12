@@ -11,6 +11,7 @@ use App\Http\Controllers\api\general\ManagementGeneralController;
 use App\Http\Controllers\api\general\StudentsAffairsontroller;
 use App\Http\Controllers\api\general\CommunityServiceController;
 use App\Http\Controllers\api\general\DiplomaController;
+use App\Http\Controllers\api\general\RegulationController;
 use App\Http\Controllers\api\general\GraduateStudiesontroller;
 use App\Http\Controllers\api\general\TeamGeneralController;
 use App\Http\Controllers\api\general\StudiesGraduateController;
@@ -172,6 +173,13 @@ Route::controller(CollegecouncilController::class)->group(function(){
     Route::post('/updatebiography/{id}', 'updatebiography');
     Route::post('/deletebiography/{id}','deletebiography');
 });
+
+Route::controller(RegulationController::class)->group(function(){
+  Route::post('/Upload_Regulation_general','UploadRegulation');
+  Route::get('/Get_Regulation_general','GetRegulation');
+  Route::post('/Update_Regulation_general/{id}','UpdateRegulation');
+  Route::post('/Delete_Regulation_general/{id}','DeleteRegulation');
+});
 ##########################################   BIO API  ##############################################
   Route::controller(ManageController::class)->group(function(){
     Route::get('/get_bio_managers', 'index');
@@ -255,6 +263,3 @@ Route::controller(TeamSoftController::class)->group(function(){
 
 });
  
-
-
-

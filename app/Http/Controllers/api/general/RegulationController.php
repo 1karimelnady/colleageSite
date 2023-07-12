@@ -33,15 +33,7 @@ class RegulationController extends Controller
         return $this->apiresponse($regulation, 'Done', 201);
     }
 
-    public function ShowRegulation($id)
-    {
-        $regulation = RegulationGeneral::find($id);
-        if($regulation){
-            return $this->apiResponse( new RegulationResourceGeneral($regulation),'Done',201);
-        }else{
-    return $this->apiResponse(null, 'Regulation Not Found', 404);
-}
-    }
+ 
 
     public function UpdateRegulation(Request $request, $id)
     {

@@ -11,7 +11,7 @@ class ManagementGeneral extends Model
 
     protected $table = "management_generals";
 
-    protected $fillable = ['id','manager_name','manager_job'];
+    protected $fillable = ['id','manager_name','managerjob'];
 
     protected $hidden = ['created_at','updated_at'];
     
